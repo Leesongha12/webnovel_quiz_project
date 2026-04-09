@@ -59,6 +59,14 @@ webnovel_quiz_project/
 ├── README.md
 └── docs/
     └── screenshots/
+        ├── git_log.png
+        ├── git_graph.png
+        ├── git_clone.png
+        ├── git_pull.png
+        ├── menu.png
+        ├── add_quiz.png
+        ├── list.png
+        └── score.png
 ```
 
 각 파일의 역할은 다음과 같습니다.
@@ -145,6 +153,9 @@ def run(self):
 
 이 구조를 사용한 이유는 콘솔 프로그램에서 메뉴를 반복적으로 보여주고,  
 사용자가 종료를 선택하기 전까지 프로그램을 계속 실행하기 위해서입니다.
+
+### 메뉴 실행 화면
+![메뉴 화면](docs/screenshots/menu.png)
 
 ---
 
@@ -360,6 +371,9 @@ def get_default_quizzes():
     ]
 ```
 
+### 퀴즈 목록 실행 화면
+![퀴즈 목록 화면](docs/screenshots/list.png)
+
 ---
 
 ## 12. 프로그램 실행 예시
@@ -377,6 +391,12 @@ def get_default_quizzes():
 선택:
 ```
 
+### 퀴즈 추가 화면
+![퀴즈 추가 화면](docs/screenshots/add_quiz.png)
+
+### 점수 확인 화면
+![점수 확인 화면](docs/screenshots/score.png)
+
 ---
 
 ## 13. Git 작업 흐름
@@ -392,6 +412,7 @@ def get_default_quizzes():
 - 퀴즈 풀기 기능 구현
 - 메뉴 및 점수 기능 구현
 - README 문서 보완
+- Git 증빙 스크린샷 추가
 
 이렇게 나눈 이유는 어떤 기능이 언제 추가되었는지 추적하기 쉽게 만들기 위해서입니다.
 
@@ -413,7 +434,8 @@ Feat: Quiz 클래스와 정답 확인 메서드 추가
 Feat: 기본 웹소설 퀴즈 데이터 연결
 Feat: 퀴즈 풀기 기능 구현
 Feat: 메뉴 선택과 종료 기능 구현
-Docs: README 평가 기준 반영 보완
+Docs: 2주차 README 최종 작성
+Docs: Git 증빙 스크린샷 추가
 ```
 
 ### 13-3. 브랜치를 분리한 이유
@@ -440,70 +462,41 @@ git merge feature/play-quiz
 
 ## 14. Git 증빙
 
-### 14-1. git log --oneline 예시
+### 14-1. git log --oneline
 
-```bash
-git log --oneline
-```
+커밋 수와 기능 단위 커밋 내역을 확인할 수 있습니다.
 
-실제 제출 시 이 부분에는 **10개 이상의 의미 있는 커밋 로그**를 첨부해야 합니다.
+![git log](docs/screenshots/git_log.png)
 
-예시:
+### 14-2. git log --oneline --graph --all
 
-```text
-13460fc Feat: 메뉴 선택과 종료 기능 구현
-ec9749a Feat: 퀴즈 풀기 기능 구현
-e30408d Feat: 기본 웹소설 퀴즈 데이터 연결
-dfcf8ac Feat: Quiz 클래스와 정답 확인 메서드 추가
-baf8f7f Init: 프로젝트 구조와 기본 파일 생성
-```
+브랜치 생성 및 병합 흐름을 확인할 수 있습니다.
 
-> 위 예시는 현재 일부 커밋만 발췌한 것이며, 실제 평가를 위해서는 10개 이상 커밋 로그가 필요합니다.
+![git graph](docs/screenshots/git_graph.png)
 
-### 14-2. git log --oneline --graph --all 예시
+### 14-3. git clone
 
-```bash
-git log --oneline --graph --all
-```
+원격 저장소를 복제한 실행 결과입니다.
 
-실제 제출 시 이 부분에는 브랜치 생성과 병합 흔적이 보이는 로그를 첨부해야 합니다.
+![git clone](docs/screenshots/git_clone.png)
 
-예시:
+### 14-4. git pull
 
-```text
-* ec9749a (HEAD -> master, feature/play-quiz) Feat: 퀴즈 풀기 기능 구현
-* e30408d Feat: 기본 웹소설 퀴즈 데이터 연결
-* dfcf8ac Feat: Quiz 클래스와 정답 확인 메서드 추가
-* baf8f7f Init: 프로젝트 구조와 기본 파일 생성
-```
+원격 저장소의 최신 변경사항을 가져온 실행 결과입니다.
 
-### 14-3. clone / pull 실습 설명
-
-과제 요구사항에 따라 `clone`과 `pull`을 사용해 보았습니다.
-
-- `git clone` : 원격 저장소를 로컬로 복제
-- `git pull` : 원격 저장소의 최신 변경사항을 현재 로컬 저장소에 반영
-
-예시 명령어:
-
-```bash
-git clone https://github.com/사용자명/webnovel_quiz_project.git
-git pull
-```
-
-> 실제 제출 시에는 이 명령어를 실행한 **터미널 화면 스크린샷** 또는 **실행 결과 로그**를 함께 첨부해야 합니다.
+![git pull](docs/screenshots/git_pull.png)
 
 ---
 
 ## 15. 스크린샷 증빙 항목
 
-실제 제출 시 아래 스크린샷을 첨부해야 평가가 가능합니다.
+실제 제출 시 아래 스크린샷을 첨부하였습니다.
 
-- 개발 환경 설정 화면
 - 프로그램 메뉴 실행 화면
 - 퀴즈 추가 화면
 - 퀴즈 목록 화면
 - 점수 확인 화면
+- `git log --oneline` 결과
 - `git log --oneline --graph --all` 결과
 - `git clone` 실행 화면
 - `git pull` 실행 화면
@@ -515,7 +508,8 @@ docs/screenshots/menu.png
 docs/screenshots/add_quiz.png
 docs/screenshots/list.png
 docs/screenshots/score.png
-docs/screenshots/git_log_graph.png
+docs/screenshots/git_log.png
+docs/screenshots/git_graph.png
 docs/screenshots/git_clone.png
 docs/screenshots/git_pull.png
 ```
