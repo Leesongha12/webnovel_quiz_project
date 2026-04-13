@@ -470,7 +470,7 @@ git merge feature/play-quiz
 
 ### 14-2. git log --oneline --graph --all
 
-브랜치 생성 및 병합 흐름을 확인할 수 있습니다.
+브랜치 생성 및 병합 흐름을 확인할 수 있습니다. 가지가 제대로 출력되지 않았으나, 현재 문제 해결해서 정상 출력됩니다.
 
 ![git graph](docs/screenshots/git_graph.png)
 
